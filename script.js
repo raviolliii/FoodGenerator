@@ -1,11 +1,12 @@
 var mainfood = document.getElementById("mainItem");
 var yes = document.getElementById("yes");
 var no = document.getElementById("no");
+var vegbtn = document.getElementById("vegbtn");
 var page = 1;
 var pagelimit = 5;
 var foods = [];
 var link = "http://www.epicurious.com";
-var veg = true;
+var veg = false;
 
 function setFood() {
   let thing = Math.floor(Math.random() * foods.length);
@@ -48,4 +49,17 @@ yes.addEventListener("click", function() {
 
 no.addEventListener("click", function() {
   setFood();
+});
+
+vegbtn.addEventListener("click", function() {
+  mainfood.innerHTML = "HOLD UP ...";
+  foods = [];
+  page = 1;
+  veg = !veg;
+  if (veg) {
+    vegbtn.innerHTML = "WANT MEAT?";
+  } else {
+    vegbtn.innerHTML = "VEGETARIAN?";
+  }
+  getFoods();
 });
