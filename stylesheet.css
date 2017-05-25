@@ -63,3 +63,39 @@ body {
 #yes:hover, #no:hover {
   cursor: pointer;
 }
+
+#vegbtn {
+  font-size: 200%;
+  padding: 10px 20px;
+  display: inline-block;
+  border: solid transparent 4px;
+  position: fixed;
+  bottom: 2%;
+  margin-left: 80%;
+  -webkit-transition: border-color 0.25 ease;
+}
+
+#vegbtn:hover {
+  border-color: black;
+  cursor: pointer;
+}
+
+#amazoncontainer {
+  font-size: 200%;
+  display: inline-block;
+  bottom: 2%;
+  padding: 10px 20px;
+  margin-left: 0%;
+  position: fixed;
+  border: solid transparent 4px;
+  -webkit-transition: border-color 0.25 ease;
+}
+
+#amazoncontainer:hover {
+  border-color: black;
+  cursor: pointer;
+}
+
+span {
+  font-family: "Roboto Condensed", sans-serif;
+}
