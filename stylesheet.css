@@ -10,11 +10,11 @@ body {
 #top {
   font-size: 250%;
   text-align: center;
-  margin-top: 10%
+  margin-top: 10%;
 }
 
-#mainItem {
-  font-size: 600%;
+#mainfood {
+  font-size: 550%;
   text-align: center;
   margin-top: 2%;
 }
@@ -65,37 +65,41 @@ body {
 }
 
 #vegbtn {
+  background-color: white;
+  color: black;
   font-size: 200%;
   padding: 10px 20px;
   display: inline-block;
-  border: solid transparent 4px;
+  border: solid black 3px;
   position: fixed;
   bottom: 2%;
   margin-left: 80%;
-  -webkit-transition: border-color 0.25 ease;
+  -webkit-transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #vegbtn:hover {
-  border-color: black;
+  background-color: black;
+  color: white;
   cursor: pointer;
+  -webkit-transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-#amazoncontainer {
-  font-size: 200%;
+#arrow {
   display: inline-block;
-  bottom: 2%;
-  padding: 10px 20px;
-  margin-left: 0%;
-  position: fixed;
-  border: solid transparent 4px;
-  -webkit-transition: border-color 0.25 ease;
+  transform: rotate(-90deg);
 }
 
-#amazoncontainer:hover {
-  border-color: black;
+#up {
+  font-size: 250%;
+  text-align: center;
+  margin-top: 2%;
+  position: fixed;
+  left: 50%;
+  margin-left: -24px;
+  /*display: none;*/
+}
+
+#up:hover {
   cursor: pointer;
 }
 
-span {
-  font-family: "Roboto Condensed", sans-serif;
-}
