@@ -1,48 +1,117 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: white;
   color: black;
+  width: 100%;
+  height: 100%;
   font-family: "Roboto Condensed", sans-serif;
   overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+#modal {
+  background-color: white;
+  width: 0vw;
+  height: 84vh;
+  border: solid 1px black;
+  border-radius: 5px;
+  font-size: 3vw;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  padding: 0px;
+  z-index: 1;
+  display: none;
+  overflow-y: scroll;
+}
+
+#modalTitle {
+  width: 90%;
+}
+
+#cancelModal {
+  color: #202020;
+  top: 2vh;
+  right: 2vw;
+  display: inline-block;
+  position: absolute;
+}
+
+#cancelModal:hover {
+  cursor: pointer;
+}
+
+#ingredientsTitle, #prepTitle {
+  font-size: 2vw;
+  position: relative;
+  top: 4%;
+}
+
+#ingredientsList, #prepList {
+  width: 50%;
+  font-size: 1.5vw;
+  position: relative;
+  top: 2%;
+}
+
+#photo {
+  width: 30vw;
+  height: 20vw;
+  position: absolute;
+  top: 20%;
+  left: 60%;
 }
 
 #top {
-  font-size: 250%;
+  /* font-size: 250%; */
+  font-size: 3vw;
   text-align: center;
+  position: relative;
   margin-top: 10%;
 }
 
 #mainfood {
-  font-size: 550%;
+  /* font-size: 550%; */
+  font-size: 5.5vw;
   text-align: center;
-  margin-top: 2%;
+  position: relative;
+  margin-top: 4%;
+}
+
+#yncontainer {
+  width: 100%;
+  position: fixed;
+  bottom: 15%;
 }
 
 #ycontainer, #ncontainer {
-  width: 45%;
-  bottom: 10%;
-  position: fixed;
+  width: 49%;
+  display: inline-block;
+  position: relative;
 }
 
-#ycontainer {
-  margin-left: 0px;
-}
-
-#ncontainer {
-  margin-left: 55%;
+#yes, #no {
+  /* font-size: 400%; */
+  font-size: 4vw;
+  display: inline-block;
+  position: relative;
+  -webkit-user-select: none;
 }
 
 #yes {
   float: right;
-  font-size: 400%;
-  -webkit-user-select: none;
+  right: 10%;
 }
 
 #no {
   float: left;
-  font-size: 400%;
-  -webkit-user-select: none;
+  left: 10%;
 }
 
 #yes::after, #no::after {
@@ -64,42 +133,32 @@ body {
   cursor: pointer;
 }
 
-#vegbtn {
+#vegbtn, #mapbtn {
   background-color: white;
   color: black;
-  font-size: 200%;
+  font-size: 2vw;
   padding: 10px 20px;
   display: inline-block;
-  border: solid black 3px;
+  border: solid black 0.2vw;
   position: fixed;
-  bottom: 2%;
-  margin-left: 80%;
   -webkit-transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-#vegbtn:hover {
+#vegbtn {
+  float: right;
+  right: 1%;
+  bottom: 2%;
+}
+
+#mapbtn {
+  float: left;
+  left: 1%;
+  bottom: 2%;
+}
+
+#vegbtn:hover, #mapbtn:hover {
   background-color: black;
   color: white;
   cursor: pointer;
   -webkit-transition: background-color 0.25s ease, color 0.25s ease;
 }
-
-#arrow {
-  display: inline-block;
-  transform: rotate(-90deg);
-}
-
-#up {
-  font-size: 250%;
-  text-align: center;
-  margin-top: 2%;
-  position: fixed;
-  left: 50%;
-  margin-left: -24px;
-  /*display: none;*/
-}
-
-#up:hover {
-  cursor: pointer;
-}
-
